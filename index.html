@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vowel Stack - Build words, beat the lava, and save Cubey." />
+  <title>Vowel Stack</title>
+  <style>
+    :root {
+      --bg1: #efe4ff;
+      --bg2: #ffffff;
+      --card: #fffaf3;
+      --text: #3d315b;
+      --muted: #756b8a;
+      --accent: #8e5ad7;
+      --accent-dark: #7545bd;
+      --yellow: #ffe156;
+      --mint: #b9fbc0;
+      --border: #ddcff0;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      line-height: 1.6;
+    }
+
+    .wrap {
+      width: min(1080px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 72px 0 44px;
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-block;
+      background: var(--yellow);
+      color: #4a3563;
+      font-weight: 900;
+      letter-spacing: .04em;
+      padding: 9px 16px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 24px rgba(91, 63, 128, .12);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--accent);
+      font-size: clamp(3rem, 9vw, 6.4rem);
+      line-height: .98;
+      letter-spacing: -0.04em;
+    }
+
+    .tagline {
+      max-width: 760px;
+      margin: 18px auto 0;
+      font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: clamp(24px, 5vw, 48px);
+      box-shadow: 0 22px 65px rgba(91, 63, 128, .12);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      color: var(--accent);
+    }
+
+    .hero-card p {
+      max-width: 820px;
+      margin: 0 auto 24px;
+      font-size: 1.05rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 14px 22px;
+      border-radius: 16px;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 10px 25px rgba(142, 90, 215, .28);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-secondary {
+      background: var(--yellow);
+      color: #4a3563;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .feature {
+      background: rgba(255,255,255,.78);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
+      color: var(--accent);
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .download-note {
+      background: #f8f2ff;
+      border-left: 4px solid var(--accent);
+      padding: 16px 18px;
+      border-radius: 14px;
+      margin-top: 20px;
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 0 52px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+      header { padding-top: 46px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">VOWEL STACK</div>
+      <h1>Build Words.<br>Beat the Lava.</h1>
+      <p class="tagline">
+        A fast-paced word survival game where falling letters, rising lava,
+        combos, and Cubey's English journey all come together.
+      </p>
+    </header>
+
+    <section class="hero-card">
+      <h2>Save Cubey, one word at a time.</h2>
+      <p>
+        Letters keep falling. The lava keeps rising. Create words quickly,
+        build combos, complete Levels, survive Endless mode, unlock new looks,
+        climb the leaderboard, and help Cubey grow from A1 to C2 English.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="Vowel-Stack.apk" download>Download APK</a>
+        <a class="btn btn-secondary" href="privacy-policy.html">Privacy Policy</a>
+      </div>
+
+      <div class="download-note">
+        Android only. If the download button does not work yet, upload your APK
+        to this GitHub repository and name it <strong>Vowel-Stack.apk</strong>.
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="feature">
+        <h3>🔥 Word Survival</h3>
+        <p>Build words from falling letters before the lava reaches Cubey.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🏆 Levels + Endless</h3>
+        <p>Complete challenges, chase high scores, and climb the leaderboard.</p>
+      </div>
+
+      <div class="feature">
+        <h3>📚 Cubey Learns</h3>
+        <p>Every word earns XP and unlocks richer dialogue from A1 to C2.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        © 2026 Vowel Stack / Sam769 ·
+        <a href="privacy-policy.html">Privacy Policy</a> ·
+        <a href="mailto:sammy76907@gmail.com">Contact</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
