@@ -23,7 +23,7 @@ This checklist records issues not conclusively resolved by the project files. A 
 
 - [ ] Review the 57 image/graphic paths in [ASSET_CREDITS.md](./ASSET_CREDITS.md) against the delivery contents and retain per-file source/creation evidence where available. The inventory paths were compared with the current project files; there were no duplicate, missing, or nonexistent image paths.
 - [ ] The developer reports that most game graphics were generated using OpenAI ChatGPT, but individual generation histories are unavailable. Confirm file origins where possible and do not attribute any image individually without evidence. Review the applicable [OpenAI Terms of Use](https://openai.com/policies/row-terms-of-use/); the developer reports that commercial use is generally permitted and attribution is not required under those terms. The general report does not establish that a specific image is an output or resolve third-party material potentially incorporated into output.
-- [ ] Confirm source and reuse rights for `assets/sprite/crypto address/ton.png` and `assets/sprite/crypto address/usdt(TRC20).png`; screenshot metadata and the general ChatGPT statement do not establish these files' origin.
+- [ ] The developer confirms `assets/sprite/crypto address/ton.png` and `assets/sprite/crypto address/usdt(TRC20).png` are screenshots, not OpenAI-generated graphics, and plans to remove them after the sale is confirmed. Verify both are absent from the project delivered to the buyer. If either is retained, confirm its source and reuse rights.
 - [ ] SilentWolf's official [FAQ](https://silentwolf.com/) says SilentWolf may be used in games that make money, supporting use of its bundled graphics as part of the addon in a commercial game. If transferring any of the five graphics under `addons/silent_wolf/assets/gfx/` separately from the addon, confirm their source, attribution, and standalone redistribution terms.
 
 ## Fonts — 10 files
@@ -40,11 +40,10 @@ This checklist records issues not conclusively resolved by the project files. A 
 
 ## Plugin, services, and release handover
 
-- [ ] Retain SilentWolf's FAQ statement permitting use in commercial games. Separately obtain source/version information and confirm redistribution/transfer terms for the SilentWolf 0.9.9 addon and its bundled assets under `addons/silent_wolf/`; the FAQ does not specify standalone component rights, and no plugin licence file was found in the project.
+- [ ] Retain SilentWolf's official FAQ statement permitting use in commercial games as the documented basis for including the plugin in Vowel Stack. No separate plugin licence file was found in the project. Confirm current service/account requirements and do not assume seller accounts or cloud data transfer.
 - [ ] Confirm SilentWolf account/project ownership, service terms, any plan or payment requirements, and an approved account/data migration or buyer-owned replacement. Do not transfer seller credentials.
-- [ ] Confirm rights and account ownership for the Effective CPM Network smartlink configured in `scripts/ad_manager.gd`; assess privacy/consent disclosures and replace the link if it is seller-controlled. The configured opaque identifier is intentionally omitted from these documents.
-- [ ] Confirm or replace the Discord invite destination and review the Google connectivity-check request for the buyer's distribution and privacy disclosures.
-- [ ] Verify applicable notices for the exact Godot Engine/export-template and Jolt-enabled engine build used in the delivered game.
+- [ ] The developer plans to remove the Effective CPM Network smartlink configured in `scripts/ad_manager.gd` after the sale is confirmed. Verify it and any seller-specific identifier are removed before delivery; if retained, confirm account rights, terms, privacy/consent disclosures and buyer authorisation.
+- [ ] The developer plans to remove the Discord invite link after the sale is confirmed. Verify the seller's invite destination is absent before delivery; if a replacement is used, confirm it is buyer-controlled. Review the Google connectivity-check request for the buyer's distribution and privacy disclosures.
 - [ ] Review generated Android output and copied assets in `android/build/` before distribution; ensure build artifacts do not contain seller-owned signing credentials, account details, or other non-transferable configuration.
 
 ## Evidence to retain
