@@ -53,7 +53,7 @@ The developer supplied these StockTune source-page matches. StockTune is documen
 The font binaries' embedded metadata identifies family/style for several fonts but does not itself establish licensing. Five font folders contain notices that state SIL Open Font License 1.1 and identify a project/author; the association of each notice with the exact bundled binary should still be confirmed. Four other font folders contain the text of CC0 1.0 but do not identify an author, source, or explicit dedication of that exact font to CC0. SilentWolf's official [FAQ](https://silentwolf.com/) answers “Can I use SilentWolf in a commercial game?” with “Yes! You can use SilentWolf in games that make money.” This confirms commercial-game use of SilentWolf; the FAQ does not give separate font-specific attribution or standalone redistribution terms for bundled assets.
 
 | Current project filename and location | Source and licence evidence |
-|---|---|---|
+|---|---|
 | `assets/fonts/DynaPuff/DynaPuff-VariableFont_wdth,wght.ttf` | `OFL.txt` names The DynaPuff Project Authors, states SIL OFL 1.1, and gives `https://github.com/googlefonts/dynapuff`. Confirm notice-to-binary association and compliance. |
 | `assets/fonts/Fredoka/Fredoka-Medium.ttf` | `OFL.txt` names The Fredoka Project Authors, states SIL OFL 1.1, and gives `https://github.com/hafontia/Fredoka-One`. Confirm notice-to-binary association and compliance. |
 | `assets/fonts/FreeCheese_Font_1_0/FreeCheese-Regular.ttf` | `License.txt` contains CC0 1.0 legal text, but does not identify this font as the work or name an affirmer/source. Licence applicability requires confirmation. |
