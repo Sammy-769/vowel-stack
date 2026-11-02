@@ -148,8 +148,8 @@ The developer reports that most game graphics were generated using OpenAI ChatGP
 
 | Current project filename and location | Source and licence evidence |
 |---|---|
-| `assets/sprite/crypto address/ton.png` | Source requires confirmation; screenshot metadata does not establish its origin or reuse rights. No individual ChatGPT-generation record is available. |
-| `assets/sprite/crypto address/usdt(TRC20).png` | Source requires confirmation; screenshot metadata does not establish its origin or reuse rights. No individual ChatGPT-generation record is available. |
+| `assets/sprite/crypto address/ton.png` | Developer confirms this is a screenshot, not OpenAI-generated artwork. Its original source and reuse rights are unverified. Developer plans to remove it after the sale is confirmed; verify it is absent from the delivered project. |
+| `assets/sprite/crypto address/usdt(TRC20).png` | Developer confirms this is a screenshot, not OpenAI-generated artwork. Its original source and reuse rights are unverified. Developer plans to remove it after the sale is confirmed; verify it is absent from the delivered project. |
 
 ### Bundled SilentWolf plugin graphics — 5 files
 
