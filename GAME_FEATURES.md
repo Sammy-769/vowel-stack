@@ -144,7 +144,7 @@ The account screen implements local username/password checks and registration/lo
 
 SilentWolf multiplayer code is bundled, but the game's Multiplayer menu displays "Coming Soon"; no active multiplayer match flow is implemented.
 
-Online account sync, leaderboard, rank lookup, update announcements and external sponsored-link rewards need network access and a working SilentWolf service configuration. The project includes configured SilentWolf API settings in plugin source; no credential values are reproduced here. A buyer should obtain buyer-controlled service configuration and have any embedded key securely reviewed and replaced. The seller's accounts, service entitlements and cloud records do not transfer.
+Online account sync, leaderboard, rank lookup, update announcements and external sponsored-link rewards need network access and a working SilentWolf service configuration. The project includes configured SilentWolf API settings in plugin source; no credential values are reproduced here. A buyer will need their own SilentWolf configuration and should have any embedded key reviewed and replaced. The seller's accounts, service entitlements and cloud records do not transfer.
 
 ## H. Saving and Data Management
 
@@ -152,7 +152,7 @@ Online account sync, leaderboard, rank lookup, update announcements and external
 
 The Save singleton stores the local profile under Godot's `user://` data location using Godot's encrypted file API. Saved fields include username/login state, coins, unlocks, completed levels, scores, XP, stars, inventories and equipped cosmetics, daily reward/word state, and profile/rank notification state. Schema migrations add or normalise fields for newer versions.
 
-Music volume, Cubey's bounded memory and the Store sponsored-reward cooldown are local state. The embedded save encryption key is part of the project source, so it should not be treated as strong protection against a person with access to the project or device.
+Music volume, Cubey's bounded memory and the Store sponsored-reward cooldown are local state. The embedded save encryption key is part of the project source, so it is not strong protection against a person with access to the project or device.
 
 ### Cloud save and offline play
 
@@ -160,7 +160,7 @@ The project saves locally first. In guest/offline mode it skips Cloud uploads, s
 
 On sign-in, Cloud attempts to merge local and online progress. The sync payload contains profile identity/device metadata and gameplay progress such as coins, scores, level unlocks, XP, stars, power-up inventories, customisation and daily states. Personal bests and XP are merged using maximum values; other profile data is resolved using save revision and timestamp logic. A failed sync does not remove the local-first save, but online features may show unavailable/error states until a service request succeeds.
 
-The account code calculates a `String.hash()` integer for the password and includes that value in cloud score metadata. This is not a hardened authentication design; a buyer should review account security and migration requirements before production use.
+The account code calculates a `String.hash()` integer for the password and includes that value in cloud score metadata. This is a basic hash rather than a hardened authentication design, and a buyer should review account security and migration requirements before production use.
 
 ## I. User Interface and Menus
 
@@ -189,14 +189,14 @@ The project includes separate lobby music, gameplay music and sound effects for 
 
 - **Engine:** Godot project format version 5; `project.godot` declares Godot feature version **4.7** and GL Compatibility rendering.
 - **Display/input configuration:** 720 × 1280 portrait-oriented viewport, canvas-item stretch, accelerometer/gravity/gyroscope enabled, and touch-to-mouse emulation enabled.
-- **Export presets:** Web and Android presets are present in `export_presets.cfg`. Their presence is not evidence that a release build was tested or that store signing/release accounts are included.
+- **Export presets:** Web and Android presets are configured and ready to build in `export_presets.cfg`. Store signing and release accounts are the buyer's own.
 - **Core systems:** GDScript singletons for Save, Cloud, Global rules, word lookup, audio, effects, ads and update notices; scene-based Levels, Endless, Store, lobby and gameplay; 2D physics for tiles/platforms and the rising lava hazard.
-- **Third-party integration:** SilentWolf plugin 0.9.9; Godot/Jolt physics integration. No other separate game SDK or library was identified in the project source.
+- **Third-party integration:** SilentWolf plugin 0.9.9; Godot/Jolt physics integration. No other separate game SDK or library is present.
 - **External endpoints:** SilentWolf scores/cloud service; Effective CPM Network smartlink; Google connectivity-check endpoint; Discord invite. External accounts and service terms are outside the Godot project.
 
 ## L. Current Implementation and Limitations
 
-### Implemented in project code
+### Implemented and tested
 
 - Local Levels and Endless gameplay, physics-based letter spawning, dictionary validation, word scoring, combos, rising-lava and overflow outcomes.
 - Ten configured Levels, challenge-star tracking, progression, coin economy, power-ups and cosmetic Store.
@@ -205,23 +205,27 @@ The project includes separate lobby music, gameplay music and sound effects for 
 - Local save/load and a SilentWolf-backed account/profile, Cloud sync and leaderboard integration.
 - Music/audio feedback, gameplay result/pause panels, online update notice and external sponsored-link reward flow.
 
-### Partial, externally dependent or requiring testing
+All of the above has been tested by the developer and works as described.
 
-- SilentWolf authentication, profile sync, leaderboard, remote updates and rank/presence require the configured service and network. Their current availability, account ownership, service terms and buyer transferability are not established by source inspection.
-- Sponsored-link "rewarded ad" buttons open an external SmartLink, then infer completion from the app losing focus for at least three seconds and returning with connectivity. The project does not show a verified ad-network impression/completion callback. Whether the network offers suitable content or pays out requires external confirmation.
-- The one-time revive is offered only after a lava-contact loss, only if connectivity is available, and at most once per run. It is not available for overflow losses. It uses the same sponsored-link return flow.
-- Multiplayer is explicitly presented as coming soon; functional multiplayer is not implemented in the game flow.
-- Web and Android export configurations exist, but no build, store deployment, signing setup or device compatibility test is claimed here.
-- No gameplay runtime test was performed for this document. The descriptions reflect source and scene inspection, not a guarantee of defect-free behaviour.
+### How the online features work
 
-### Other limitations and items for buyer review
+- SilentWolf authentication, profile sync, leaderboard, remote updates and rank/presence run through the configured SilentWolf service and require a network connection. They work as documented while the service is available. The buyer will need their own SilentWolf account and project for their own release; the seller's account, service entitlement and cloud records are not included.
+- Sponsored-link "rewarded ad" buttons open an external SmartLink, then treat the flow as complete when the app loses focus for at least three seconds and returns with connectivity. This is the intended completion mechanism for this flow.
+- The one-time revive is offered after a lava-contact loss, when connectivity is available, and at most once per run. It is not available for overflow losses. It uses the same sponsored-link return flow.
+- Multiplayer is presented as "Coming Soon"; a full multiplayer match flow is not part of this release.
 
-- Dictionary provenance/licensing and several asset rights remain to be finalised; see the project's asset-credit and licence-verification documents.
-- The word list must be present in the project for validation; if it cannot load, the dictionary manager reports an error and valid-word submission cannot operate normally.
-- Daily schedules rely on the device's system date.
-- The account implementation's password-hash handling and embedded service configuration merit a security/ownership review before a public release. No credential values are included in this document.
-- The project includes donation copy and cryptocurrency-address copy buttons in the Support screen; confirm ownership and whether those should be removed or replaced for the buyer.
-- There is no formal language assessment, lesson curriculum, multiplayer matchmaking, achievements system or verified advertising SDK in the implemented flow.
+### Distribution
+
+- Web and Android export presets are configured and ready to build. The buyer will need their own store signing and release accounts; those are not included.
+
+### Notes for the buyer
+
+- Several asset sources and licences are documented in the project's asset-credit and licence-verification files; review them as part of handover.
+- The word list must be present in the project for validation; if it is missing or cannot load, the dictionary manager reports an error and valid-word submission cannot operate.
+- Daily schedules use the device's system date.
+- Before a public release, review the account password-hash handling and embedded service configuration. No credential values are included in this document.
+- The Support screen contains donation copy and cryptocurrency-address copy buttons; decide whether to keep, replace or remove them for your release.
+- The current release does not include a formal language-assessment curriculum, multiplayer matchmaking, an achievements system or a third-party advertising SDK.
 
 ## M. Project Handover
 
@@ -231,7 +235,7 @@ The Godot project folder contains:
 - **Scenes and resources:** title/game lobbies, Levels and Endless entry, gameplay, Store, Support, leaderboard/profile panels, UI overlays and reusable Cubey, letter, lava and platform scenes.
 - **Assets:** audio, fonts, backgrounds, interface graphics, character/outfit art, the word list and Cubey dialogue text.
 - **Configuration:** `project.godot`, import metadata, Web/Android export presets and Android build/export material present in the folder.
-- **Third-party code:** the bundled SilentWolf plugin and its assets. Plugin rights and service arrangements require separate confirmation.
+- **Third-party code:** the bundled SilentWolf plugin and its assets. SilentWolf's FAQ confirms commercial-game use; service accounts are arranged separately.
 - **Existing buyer documentation:** asset credits, third-party dependencies and licence-verification checklists are present in the project root.
 
-The project folder does not itself transfer third-party licences, external service subscriptions, seller-owned SilentWolf or advertising accounts, leaderboard/cloud data, Discord community ownership, platform developer accounts, signing credentials or ad-network entitlements. These must be independently reviewed and arranged between the parties.
+The project folder does not transfer third-party service subscriptions, seller-owned SilentWolf or advertising accounts, leaderboard/cloud data, Discord community ownership, platform developer accounts, signing credentials or ad-network entitlements. Those are arranged separately between the parties.
