@@ -10,29 +10,43 @@ Godot import sidecars (`*.import`), the generated `.godot/` cache, and copies/bu
 
 ## Audio — 17 files
 
-The audio files have MP3 or OGG content as indicated by their extensions and file signatures. Inspected readable ID3/Vorbis tags did not provide source, author, attribution, or licence details. **Source requires confirmation** for every file below; commercial-use rights have not been verified.
+The audio files have MP3 or OGG content as indicated by their extensions and file signatures. Inspected readable ID3/Vorbis tags did not establish source or licence. The entries below distinguish developer-supplied source information from independently verified file provenance. A supplied asset-page URL identifies the claimed source but does not, by itself, prove that the project file is that download or that licence conditions were met. Commercial-use rights are not confirmed for any audio file.
 
-| Current project filename and location | Original filename | Source and licence evidence |
-|---|---|---|
-| `assets/audio/game/combo.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/game/freeze.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/game/notification.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/game/reward.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/game/slow_motion.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/game/victory.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/money/coin.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/money/error.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/money/money.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/music/game_music.ogg` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/music/lobby_music.ogg` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/platform/platform.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/platform/platform2.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/platform/platform3.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/pop/balloon pop.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/pop/pop.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
-| `assets/audio/pop/pop_select.mp3` | Not identified | Source requires confirmation; no attribution or licence established |
+### Pixabay sound effects
 
-No evidence in the project connects these files to Pixabay or another particular library. Verify any downloaded, renamed, edited, or commissioned audio against original download records and the applicable licence terms.
+The developer supplied the following claimed source matches. “Claimed match” is not an independent content-level verification of the downloaded file.
+
+| Game sound | Current project filename and location | Claimed original asset | Claimed source page | Licence reference and status |
+|---|---|---|---|---|
+| Victory | `assets/audio/game/victory.mp3` | Level Up 08 | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-level-up-08-402152/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Freeze | `assets/audio/game/freeze.mp3` | Iced Magic 6 | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-iced-magic-6-378606/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Notification | `assets/audio/game/notification.mp3` | New Notification 051 | [Pixabay asset page](https://pixabay.com/sound-effects/technology-new-notification-051-494246/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Slow motion | `assets/audio/game/slow_motion.mp3` | Slowdown FX | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-slowdown-fx-343685/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Money | `assets/audio/money/money.mp3` | Cashier "Ka-ching" Sound Effect | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-cashier-quotka-chingquot-sound-effect-129698/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Error | `assets/audio/money/error.mp3` | UI Error Pop | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-ui-error-pop-515668/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Pop | `assets/audio/pop/pop.mp3` | Pop | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-pop-402324/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Balloon pop | `assets/audio/pop/balloon pop.mp3` | Balloon Pop Sound Effect | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-balloon-pop-sound-effect-504628/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Pop select | `assets/audio/pop/pop_select.mp3` | Multi Pop 2 | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-multi-pop-2-188167/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Platform | `assets/audio/platform/platform.mp3` | Body Fall | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-body-fall-142378/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Platform 3 | `assets/audio/platform/platform3.mp3` | Heavy Body Fall | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-heavy-body-fall-352446/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Platform 2 | `assets/audio/platform/platform2.mp3` | Character Fall Impact | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-character-fall-impact-352287/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+| Reward | `assets/audio/game/reward.mp3` | Achievement Badge Pop Sound 1 | [Pixabay asset page](https://pixabay.com/sound-effects/film-special-effects-achievement-badge-pop-sound-1-547860/) | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/) and [full terms](https://pixabay.com/service/terms/); applicability and compliance require confirmation |
+
+The developer confirms that the two remaining unidentified sound effects were also downloaded from Pixabay. No individual asset page or original title has been identified for either file.
+
+| Current project filename and location | Source information | Individual asset page | Licence reference and status |
+|---|---|---|---|
+| `assets/audio/game/combo.mp3` | Pixabay (developer-confirmed platform source) | Not yet identified | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/); individual asset and compliance not independently verified |
+| `assets/audio/money/coin.mp3` | Pixabay (developer-confirmed platform source) | Not yet identified | [Pixabay Content License Summary](https://pixabay.com/service/license-summary/); individual asset and compliance not independently verified |
+
+### StockTune music
+
+The developer supplied these StockTune source-page matches. StockTune is documented separately from Pixabay. The source pages identify the claimed tracks, but the project's audio files have not been independently matched to the downloads. StockTune's applicable licence and terms could not be verified during this review; no Pixabay terms are attributed to these files.
+
+| Game music | Current project filename and location | Claimed original asset | Claimed source page | Licence status |
+|---|---|---|---|---|
+| In-game music | `assets/audio/music/game_music.ogg` | Echoes of Childhood Dreams | [StockTune track page](https://stocktune.com/free-music/echoes-of-childhood-dreams-230054-140085) | Applicable StockTune licence and terms require verification |
+| Lobby music | `assets/audio/music/lobby_music.ogg` | Memories in Slow Motion | [StockTune track page](https://stocktune.com/free-music/memories-in-slow-motion-230053-140085) | Applicable StockTune licence and terms require verification |
 
 ## Fonts — 10 files
 
@@ -53,7 +67,9 @@ The font binaries' embedded metadata identifies family/style for several fonts b
 
 ## Images and graphics — 58 files
 
-No image's embedded metadata establishes an original asset source, author, or applicable licence. No evidence establishes that any image was AI-generated. Metadata on some files records editing software or a screenshot tool only; that is not evidence of the original creator or rights. **Source requires confirmation** for every file below.
+The developer reports that most of the game's graphical assets were generated using OpenAI ChatGPT's image-generation capabilities. Individual generation histories were not retained, so this general statement does not establish which specific files were generated that way; it is not a claim that every image below was generated with ChatGPT. The inventory is grouped by the project directories (background/mode graphics, buttons, crypto-address graphics, gameplay and character assets, outfits, player parts, UI, project-level images, and bundled SilentWolf graphics).
+
+For the game artwork, **source requires confirmation** means the file's individual origin has not been established. The developer-reported general source is OpenAI ChatGPT, but no per-file generation record is available. The supplied reference is [OpenAI's Terms of Use](https://openai.com/policies/row-terms-of-use/); the developer reports that commercial use is generally permitted and attribution is not required under those terms. This is subject to the applicable terms and does not establish that a specific image is ChatGPT output or clear third-party material potentially incorporated into output. The two crypto-address graphics and the five SilentWolf graphics have distinct source notes below; do not infer ChatGPT origin for them.
 
 | Current project filename and location | Original filename | Source and licence evidence |
 |---|---|---|
@@ -116,19 +132,15 @@ No image's embedded metadata establishes an original asset source, author, or ap
 | `addons/silent_wolf/assets/gfx/info_icon.png` | Not identified | Bundled with SilentWolf; no separate source or image licence notice found |
 | `addons/silent_wolf/assets/gfx/info_icon_small.png` | Not identified | Bundled with SilentWolf; no separate source or image licence notice found |
 
-## Language and text resources — 2 files
+## Language and dialogue resources — 2 files
 
-| Current project filename and location | Original filename | Source and licence evidence |
-|---|---|---|
-| `assets/data/words_list.txt` | Not identified | 370,105 lines/entries. Source and dataset licence require confirmation. `assets/data/LICENSE.md` contains Unlicense text in the same directory, but does not identify the word list, its author, or the work to which it applies; do not treat it as verified clearance for the list. |
-| `scenes/units/cubey/dialogues.txt` | Not identified | In-game dialogue text. No source, author, or separate licence attribution identified; source/ownership requires confirmation. |
+| Current project filename and location | Purpose and source/licence evidence |
+|---|---|
+| `assets/data/words_list.txt` | 370,105 lines/entries used by the local word manager for dictionary validation. The associated licence text is in [`assets/data/LICENSE.md`](./assets/data/LICENSE.md), which contains the Unlicense notice and links to [The Unlicense](https://unlicense.org/). The notice permits copying, modification, publication, use, sale and distribution for commercial or non-commercial purposes; attribution is not required, and the work is provided without warranty. This records the notice associated with the word list, not the provenance of any separately sourced dictionary or dataset content that may be incorporated into it. The list's compiler/source and any such third-party content remain unverified. |
+| `scenes/units/cubey/dialogues.txt` | Contains dialogue data used by the Cubey character system, organised into categories and A1–C2 rank levels, with lines and format placeholders. Created with assistance from OpenAI Codex, according to the developer. This does not establish Codex as the legal author or rights holder of every sentence. No separate commercial-use or licensing claim is made; applicable rights and any third-party contributions require confirmation. |
 
 The project contains no other standalone dictionary or word-list file identified by this inventory.
 
-## AI-generated graphics
-
-No project record, attribution, metadata, or other inspected evidence establishes that any graphic was AI-generated. The files should not be represented as AI-generated (or as human-created) without confirmation from the creator or source records.
-
 ## Evidence limitations
 
-The project contains font notices and metadata, but no asset download receipts, Pixabay references, audio credits, artwork credits, or reliable original-filename mapping for the audio or game art. Filenames and visual appearance alone are not sufficient to establish source, licence, or commercial-use rights. See [LICENCE_VERIFICATION.md](./LICENCE_VERIFICATION.md) for the buyer-facing verification checklist.
+The project contains font notices and metadata and the Unlicense text at `assets/data/LICENSE.md`. It does not contain download receipts, individual ChatGPT image-generation records, or evidence matching the claimed Pixabay/StockTune audio pages to the actual downloaded files. Filenames, appearance, and a general source statement alone do not establish an individual asset's origin or applicable rights. See [LICENCE_VERIFICATION.md](./LICENCE_VERIFICATION.md) for the remaining checks.
